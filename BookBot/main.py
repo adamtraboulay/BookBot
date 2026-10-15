@@ -6,6 +6,7 @@ def get_book_text():
 
 def main():
     booktext = get_book_text()
-    print(booktext)
+    num_words = len(booktext.split())
+    print(f"Found {num_words} total words")
 
 main()
