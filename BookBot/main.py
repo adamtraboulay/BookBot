@@ -1,4 +1,4 @@
-from stats import get_num_words
+from stats import get_num_words, convert_to_lowercase
 
 def get_book_text():
     with open("books/frankenstein.txt") as f:
@@ -8,6 +8,7 @@ def get_book_text():
 def main():
     booktext = get_book_text()
     num_words = get_num_words(booktext)
+    converted_text = convert_to_lowercase(booktext)
     print(f"Found {num_words} total words")
-
+    print(converted_text)
 main()
